@@ -5,6 +5,7 @@ import InfoCards from './components/Infocards/Infocards'
 import SchoolFeatures from './components/SchoolFeatures/SchoolFeatures'
 import Principal from './components/Principal/Principal'
 import Chairmain from './components/Chairman/Chairmain'
+import Fotter from './components/Fotter/Fotter'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Principal/>
       <Chairmain/>
       <SchoolFeatures/>
+      <Fotter/>
     </div>
   )
 }
