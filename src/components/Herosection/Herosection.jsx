@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 import img1 from "../../assets/san1.jpg";
 import img2 from "../../assets/san2.jpg";
@@ -8,12 +9,12 @@ import img4 from "../../assets/san4.jpg";
 
 const images = [img1, img2, img3, img4];
 
-const prompts = [
-  "Innovative Learning",
-  "Future Leaders",
-  "Smart Education",
-  "Excellence Every Day",
-];
+// const prompts = [
+//   "Innovative Learning",
+//   "Future Leaders",
+//   "Smart Education",
+//   "Excellence Every Day",
+// ];
 
 const Herosection = () => {
   const [current, setCurrent] = useState(0);
@@ -26,15 +27,16 @@ const Herosection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    const promptTimer = setInterval(() => {
-      setPromptIndex((prev) => (prev === prompts.length - 1 ? 0 : prev + 1));
-    }, 2500);
-    return () => clearInterval(promptTimer);
-  }, []);
+  // useEffect(() => {
+  //   const promptTimer = setInterval(() => {
+  //     setPromptIndex((prev) => (prev === prompts.length - 1 ? 0 : prev + 1));
+  //   }, 2500);
+  //   return () => clearInterval(promptTimer);
+  // }, []);
 
   return (
     <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden font-outfit">
+      {/* Background Slideshow */}
       <AnimatePresence>
         <motion.img
           key={current}
@@ -60,13 +62,13 @@ const Herosection = () => {
           transition={{ duration: 0.8 }}
         >
           Welcome to{" "}
-          <span className="text-yellow-400 drop-shadow-[0_0_10px_rgba(255,255,0,0.7)]">
-            Sanskriti 
+          <span className="text-yellow-400 drop-shadow-[0_0_5px_rgba(255,255,0,0.7)]">
+            Sanskriti Public School
           </span>
-          School
         </motion.h1>
 
-        <div className="mt-4 h-10 flex items-center justify-center">
+        {/* Animated Prompts */}
+        {/* <div className="mt-4 h-10 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.span
               key={promptIndex}
@@ -79,7 +81,7 @@ const Herosection = () => {
               {prompts[promptIndex]}
             </motion.span>
           </AnimatePresence>
-        </div>
+        </div> */}
 
         <motion.p
           className="mt-3 text-base md:text-xl max-w-xl md:max-w-2xl text-gray-200 leading-relaxed"
@@ -114,6 +116,18 @@ const Herosection = () => {
           />
         ))}
       </div>
+
+      {/* WhatsApp Floating Button */}
+      <motion.a
+        href="https://wa.me/917352205506"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all flex items-center justify-center z-50"
+        whileHover={{ scale: 1.15 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FaWhatsapp size={28} />
+      </motion.a>
     </section>
   );
 };

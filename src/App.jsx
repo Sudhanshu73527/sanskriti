@@ -6,6 +6,9 @@ import SchoolFeatures from './components/SchoolFeatures/SchoolFeatures'
 import Principal from './components/Principal/Principal'
 import Chairmain from './components/Chairman/Chairmain'
 import Fotter from './components/Fotter/Fotter'
+import Testi from './components/Testi/Testi'
+import StatsSection from './components/StatsSection/StatsSection'
+import SchoolPrompts from './components/SchoolPrompts/SchoolPrompts'
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
       <Principal/>
       <Chairmain/>
       <SchoolFeatures/>
+      <StatsSection/>
+      <SchoolPrompts/>
+      <Testi/>
       <Fotter/>
     </div>
   )

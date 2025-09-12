@@ -25,11 +25,12 @@ const infrastructureData = [
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, scale: 0.9, y: 50 },
   visible: (i) => ({
     opacity: 1,
+    scale: 1,
     y: 0,
-    transition: { delay: i * 0.1, type: "spring", stiffness: 80 },
+    transition: { delay: i * 0.12, type: "spring", stiffness: 100, damping: 10 },
   }),
 };
 
@@ -75,21 +76,24 @@ const Infrastructure = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="relative group p-6 bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg 
-                         border border-green-100 hover:shadow-2xl hover:shadow-green-300/50 
+              whileHover={{ scale: 1.05, rotateX: 3, rotateY: 3 }}
+              transition={{ type: "spring", stiffness: 150 }}
+              className="relative group p-6 bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl 
+                         border border-green-100 hover:shadow-2xl hover:shadow-green-400/50 
                          transition-all duration-500 overflow-hidden"
             >
-              {/* Glowing Background Hover Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-green-200/40 to-transparent blur-xl"></div>
+              {/* Animated Border */}
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-green-300 transition-all duration-500"></div>
 
               {/* Icon */}
               <motion.div
                 className={`relative z-10 mx-auto w-20 h-20 mb-4 rounded-full flex items-center justify-center
-                            bg-gradient-to-br ${item.color} text-white text-4xl shadow-xl`}
-                animate={{ y: [0, -5, 0] }}
+                            bg-gradient-to-br ${item.color} text-white text-4xl shadow-lg`}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
               >
                 {item.icon}
+                <div className="absolute inset-0 rounded-full bg-white/10 blur-xl group-hover:blur-2xl"></div>
               </motion.div>
 
               {/* Title */}
@@ -104,11 +108,11 @@ const Infrastructure = () => {
 
               {/* Button */}
               <motion.button
-                whileHover={{ scale: 1.08 }}
+                whileHover={{ scale: 1.1, boxShadow: "0 0 15px rgba(34,197,94,0.7)" }}
                 whileTap={{ scale: 0.95 }}
                 className="relative z-10 mx-auto block border border-green-500 text-green-600 
                            px-5 py-2 rounded-full font-semibold text-xs sm:text-sm
-                           hover:bg-green-500 hover:text-white shadow-md hover:shadow-lg transition-all"
+                           hover:bg-green-500 hover:text-white shadow-md transition-all"
               >
                 Learn More
               </motion.button>
