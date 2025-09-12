@@ -79,7 +79,7 @@ const Navbar = () => {
               MANJHAUL, BEGUSARAI
             </h2>
             <p className="text-yellow-500 font-bold text-2xl">
-              School No.: 65881, Affiliation Code - 330252
+              School No.: 65881, Affiliation Code - 330888
             </p>
           </div>
 

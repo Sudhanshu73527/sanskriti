@@ -9,31 +9,11 @@ import {
 } from "react-icons/fa";
 
 const stats = [
-  {
-    number: "1500+",
-    text: "Students currently enrolled across all grades",
-    icon: FaUserGraduate,
-  },
-  {
-    number: "80+",
-    text: "Dedicated and highly qualified teachers",
-    icon: FaChalkboardTeacher,
-  },
-  {
-    number: "25+",
-    text: "Co-curricular activities including Music, Dance & Sports",
-    icon: FaBookOpen,
-  },
-  {
-    number: "95%",
-    text: "Board Exam Results Success Rate (Class X & XII)",
-    icon: FaMedal,
-  },
-  {
-    number: "100%",
-    text: "Happy Parents & Positive Student Feedback",
-    icon: FaSmile,
-  },
+  { number: "1500+", text: "Students currently enrolled across all grades", icon: FaUserGraduate },
+  { number: "80+", text: "Dedicated and highly qualified teachers", icon: FaChalkboardTeacher },
+  { number: "25+", text: "Co-curricular activities including Music, Dance & Sports", icon: FaBookOpen },
+  { number: "95%", text: "Board Exam Results Success Rate (Class X & XII)", icon: FaMedal },
+  { number: "100%", text: "Happy Parents & Positive Student Feedback", icon: FaSmile },
 ];
 
 const cardVariants = {
@@ -42,19 +22,14 @@ const cardVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: {
-      delay: i * 0.15,
-      type: "spring",
-      stiffness: 120,
-      damping: 10,
-    },
+    transition: { delay: i * 0.15, type: "spring", stiffness: 120, damping: 10 },
   }),
 };
 
 const StatsSection = () => {
   return (
     <section className="relative bg-gradient-to-b from-green-50 via-white to-green-50 py-20 overflow-hidden">
-      {/* Animated background circles */}
+      {/* Background circles */}
       <motion.div
         className="absolute w-72 h-72 bg-green-200 rounded-full blur-3xl opacity-30 top-10 left-10"
         animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
@@ -67,19 +42,16 @@ const StatsSection = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Title */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold text-center mb-16
-                     bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          className="text-4xl sm:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: -30 }} 
+          whileInView={{ opacity: 1, y: 0 }}  
+          viewport={{ once: true }} 
+          transition={{ duration: 0.8 }}  
         >
           Our School at a Glance
         </motion.h2>
 
-        {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((item, index) => {
             const Icon = item.icon;
@@ -91,27 +63,25 @@ const StatsSection = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="group bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center justify-center text-center
-                           border border-gray-100 hover:shadow-2xl relative overflow-hidden 
-                           transition-all duration-500 hover:-translate-y-3"
+                className="group relative bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center justify-center text-center
+                           border border-gray-200 hover:shadow-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3"
               >
-                {/* Glowing Background Hover Effect */}
+                {/* Animated Border */}
+                <div className="absolute inset-0 rounded-3xl pointer-events-none group-hover:border-2 group-hover:border-green-500 group-hover:animate-blink-border"></div>
+
+                {/* Glowing Background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-tr from-green-100 to-emerald-50 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-tr from-green-100 to-emerald-50 opacity-0 group-hover:opacity-100 rounded-3xl"
                   initial={{ scale: 0 }}
                   whileHover={{ scale: 1 }}
                   transition={{ duration: 0.4 }}
                 />
 
-                {/* Icon with animations */}
+                {/* Icon */}
                 <motion.div
                   className="text-green-600 text-6xl mb-4 relative z-10"
                   animate={{ y: [0, -5, 0], rotate: [0, 2, -2, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <Icon />
                 </motion.div>
@@ -135,6 +105,18 @@ const StatsSection = () => {
           })}
         </div>
       </div>
+
+      {/* Keyframes */}
+      <style>{`
+        @keyframes blink-border {
+          0% { box-shadow: 0 0 0px #22c55e, 0 0 10px rgba(34, 197, 94, 0.5); }
+          50% { box-shadow: 0 0 12px #22c55e, 0 0 24px rgba(34, 197, 94, 0.7); }
+          100% { box-shadow: 0 0 0px #22c55e, 0 0 10px rgba(34, 197, 94, 0.5); }
+        }
+        .animate-blink-border {
+          animation: blink-border 1s infinite ease-in-out;
+        }
+      `}</style>
     </section>
   );
 };
