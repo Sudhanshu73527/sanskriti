@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import {
   FaCalendarAlt,
   FaCheckCircle,
@@ -21,8 +20,7 @@ const cardData = [
       "Events and celebrations",
     ],
     buttonText: "View Full Calendar",
-    buttonColor:
-      "border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white",
+    buttonColor: "border-blue-500 text-blue-500",
   },
   {
     title: "News & Updates",
@@ -53,8 +51,7 @@ const cardData = [
               responsibility, and pride. Elections, campaigns, and activities 
               will soon be launched.`,
     buttonText: "Program Details",
-    buttonColor:
-      "border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white",
+    buttonColor: "border-yellow-500 text-yellow-500",
   },
 ];
 
@@ -66,23 +63,15 @@ const InfoCards = () => {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4 relative z-10">
         {cardData.map((card, index) => (
-          <motion.div
+          <div
             key={index}
-            className="backdrop-blur-xl bg-white/80 rounded-2xl shadow-lg border border-white/40 overflow-hidden flex flex-col h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className="backdrop-blur-xl bg-white/80 rounded-2xl shadow-lg border border-white/40 overflow-hidden flex flex-col h-full"
           >
             {/* Header */}
             <div
               className={`bg-gradient-to-r ${card.gradient} text-white p-5 flex items-center gap-3 text-xl font-bold shadow-lg`}
             >
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-              >
-                {card.icon}
-              </motion.div>
+              {card.icon}
               <span className="tracking-wide">{card.title}</span>
             </div>
 
@@ -109,7 +98,7 @@ const InfoCards = () => {
                   </ul>
                   <a
                     href="#"
-                    className={`mt-auto border px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${card.buttonColor}`}
+                    className={`mt-auto border px-5 py-2  rounded-full text-sm font-semibold ${card.buttonColor}`}
                   >
                     {card.buttonText}
                   </a>
@@ -123,10 +112,9 @@ const InfoCards = () => {
                   style={{ maxHeight: "300px" }}
                 >
                   {card.items.map((item, i) => (
-                    <motion.div
+                    <div
                       key={i}
-                      className="flex gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300"
-                      whileHover={{ scale: 1.02 }}
+                      className="flex gap-4 p-3 rounded-lg"
                     >
                       <div
                         className={`${item.iconBg} text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg`}
@@ -137,10 +125,14 @@ const InfoCards = () => {
                         <h4 className="font-bold text-gray-800">
                           {item.title}
                         </h4>
-                        <p className="text-xs text-gray-500">{item.date}</p>
-                        <p className="text-sm text-gray-600">{item.desc}</p>
+                        <p className="text-xs text-gray-500">
+                          {item.date}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {item.desc}
+                        </p>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               )}
@@ -148,30 +140,28 @@ const InfoCards = () => {
               {/* Student Council Section */}
               {card.content && (
                 <div className="flex flex-col flex-1 text-center justify-center">
-                  <motion.div
-                    className="text-yellow-500 text-6xl mb-4 flex justify-center"
-                    animate={{ rotate: [0, 10, -10, 0] }}
-                    transition={{ repeat: Infinity, duration: 4 }}
-                  >
+                  <div className="text-yellow-500 text-6xl mb-4 flex justify-center">
                     <FaUsers />
-                  </motion.div>
+                  </div>
                   <h4 className="font-bold text-lg mb-2 text-gray-800">
                     Coming Soon!
                   </h4>
-                  <p className="text-sm text-gray-600 mb-4">{card.content}</p>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {card.content}
+                  </p>
                   <p className="font-semibold mb-6 text-gray-700">
                     Stay tuned for updates!
                   </p>
                   <a
                     href="#"
-                    className={`border px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${card.buttonColor}`}
+                    className={`border px-5 py-2 rounded-full text-sm font-semibold ${card.buttonColor}`}
                   >
                     {card.buttonText}
                   </a>
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

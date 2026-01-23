@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaLock, FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaLock,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/sanslogo1.png"; // replace with your logo
+import logo from "../../assets/logo1.jfif";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,144 +24,138 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full shadow-md font-outfit  top-0 z-50">
+    <header className="w-full shadow-md font-outfit top-0 z-50">
       {/* 🔹 Top Bar (Desktop only) */}
-      <div className="bg-green-900 text-white text-xs md:text-sm hidden  md:block">
+      <div className="bg-green-900 text-white text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
-          {/* Left side */}
-          <div className="flex items-center sticky top-0 space-x-6">
+          <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-2">
               <FaPhoneAlt className="text-yellow-400" />
-              <span>+91 99348 34981 / 7352205506</span>
+              <span>+91-70703 23285 / +91-70703 23285</span>
             </span>
             <span className="flex items-center space-x-2">
               <FaEnvelope className="text-yellow-400" />
-              <span>sanskritischoolbegusarai@.in</span>
+              <span>rcinternationalSchool@.in</span>
             </span>
           </div>
 
-          {/* Right side */}
           <div className="flex items-center space-x-6">
-            <span className="cursor-pointer hover:text-yellow-400 transition">
-              CBSE
-            </span>
-            <span className="flex items-center space-x-2 cursor-pointer hover:text-yellow-400 transition">
+            <span className="cursor-pointer hover:text-yellow-400">CBSE</span>
+            <span className="flex items-center space-x-2 cursor-pointer hover:text-yellow-400">
               <FaLock /> <span>Login</span>
             </span>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-yellow-400 text-black font-semibold px-5 py-1 rounded-sm shadow hover:bg-yellow-500 transition"
-            >
+            <button className="bg-yellow-400 text-black font-semibold px-5 py-1 rounded-sm">
               APPLY NOW
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
 
       {/* 🔹 Middle Section */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-          {/* Logo + School name (for mobile) */}
-          <div className="flex items-center space-x-3">
-            <motion.img
-              src={logo}
-              alt="School Logo"
-              className="h-15 md:h-30 w-auto"
-              whileHover={{ rotate: 5, scale: 1.05 }}
-            />
-            {/* Mobile school name */}
-            <h1 className="text-lg font-semibold text-green-800 uppercase md:hidden">
-              Sanskriti PUBLIC SCHOOL
+          {/* Logo + Mobile School Name */}
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="logo" className="h-12 w-auto" />
+            <h1 className="text-sm font-bold text-green-800 uppercase md:hidden">
+              R C International School
             </h1>
           </div>
 
-          {/* Full School Name (Desktop only) */}
+          {/* Desktop School Name */}
           <div className="text-center flex-1 hidden md:block">
-            <h1 className="text-2xl md:text-4xl font-extrabold text-green-800 uppercase tracking-wide">
-              Sanskriti PUBLIC SCHOOL
+            <h1 className="text-3xl font-extrabold text-green-800 uppercase">
+              R C International School
             </h1>
-            <h2 className="text-lg md:text-2xl font-bold text-purple-800 tracking-wider">
-              MANJHAUL, BEGUSARAI
+            <h2 className="text-xl font-bold text-purple-800">
+              CHAUTARWA, BIHAR-845101
             </h2>
-            <p className="text-yellow-500 font-bold text-2xl">
-              School No.: 65881, Affiliation Code - 330888
+            <p className="text-yellow-500 font-bold">
+              School No.: 12345, Affiliation Code - 000000
             </p>
           </div>
 
-          {/* Contact Right Side (Desktop only) */}
-          <div className="hidden lg:flex flex-col items-start space-y-2 text-green-900">
-            <div className="flex items-center space-x-2">
-              <FaPhoneAlt className="text-yellow-500" />
-              <span>+91 99348 34981</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <FaPhoneAlt className="text-yellow-500" />
-              <span>7352205506</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <FaEnvelope className="text-yellow-500" />
-              <span>sanskritischoolbegusarai@.in</span>
-            </div>
+          {/* Desktop Contact */}
+          <div className="hidden lg:flex flex-col space-y-1 text-green-900">
+            <span className="flex items-center gap-2">
+              <FaPhoneAlt className="text-yellow-500" /> +91-70703 23285
+            </span>
+            <span className="flex items-center gap-2">
+              <FaEnvelope className="text-yellow-500" /> rcinternationalSchool@.in
+            </span>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden text-green-800 text-2xl"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen(true)}
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            <FaBars />
           </button>
         </div>
       </div>
 
-      {/* 🔹 Main Navbar (Desktop only) */}
-      <nav className="bg-gradient-to-r from-green-800 via-green-700 to-green-900 shadow-md hidden lg:block">
-        <div className="max-w-7xl mx-auto px-4">
-          <ul className="flex items-center justify-between text-white font-semibold text-sm md:text-base">
-            {navItems.map((item, i) => (
-              <motion.li
-                key={i}
-                className="relative px-3 py-3 cursor-pointer group"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span>{item}</span>
-                <span className="absolute left-0 bottom-0 w-0 h-1 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
+      {/* 🔹 Desktop Navbar */}
+      <nav className="bg-gradient-to-r from-green-800 via-green-700 to-green-900 hidden lg:block">
+        <ul className="max-w-7xl mx-auto flex justify-between px-4 text-white font-semibold">
+          {navItems.map((item, i) => (
+            <li key={i} className="px-3 py-3 cursor-pointer relative group">
+              {item}
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-yellow-400 group-hover:w-full transition-all"></span>
+            </li>
+          ))}
+        </ul>
       </nav>
 
-      {/* 🔹 Mobile Menu (ONLY Links) */}
+      {/* 🔹 MOBILE MENU (TOP SLIDE DESIGN) */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden fixed top-0 left-0 w-3/4 h-full bg-green-900 text-white shadow-lg z-50"
-          >
-            <div className="p-6 space-y-6">
-              {/* Logo inside menu */}
-              <img src={logo} alt="School Logo" className="h-12 mb-6" />
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMenuOpen(false)}
+            />
 
-              {/* Nav Links only */}
-              <ul className="space-y-4">
+            {/* Menu */}
+            <motion.div
+              initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-100%" }}
+              transition={{ duration: 0.35 }}
+              className="fixed top-0 left-0 w-full bg-white z-50 rounded-b-2xl lg:hidden"
+            >
+              <div className="flex items-center justify-between px-4 py-4 border-b">
+                <h2 className="font-bold text-green-800 text-sm">
+                  R C International School
+                </h2>
+                <button onClick={() => setMenuOpen(false)}>
+                  <FaTimes className="text-xl text-green-800" />
+                </button>
+              </div>
+
+              <ul className="divide-y">
                 {navItems.map((item, i) => (
-                  <motion.li
+                  <li
                     key={i}
-                    whileHover={{ x: 8 }}
-                    className="cursor-pointer text-lg border-b border-green-700 pb-2"
+                    className="px-5 py-4 text-gray-800 font-medium"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item}
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </div>
-          </motion.div>
+
+              <div className="p-4">
+                <button className="w-full bg-green-800 text-white py-3 rounded-lg font-semibold">
+                  Apply for Admission
+                </button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
