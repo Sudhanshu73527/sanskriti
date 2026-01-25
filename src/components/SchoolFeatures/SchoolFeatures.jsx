@@ -70,41 +70,57 @@ const infrastructureData = [
 
 const Infrastructure = () => {
   return (
-    <section className="relative bg-[#f7faf8] py-24 px-4 font-playfair">
+    <section className="relative bg-[#f7faf8] py-24 px-4 font-playfair overflow-hidden">
       
-      {/* Subtle Background Texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.06),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(34,197,94,0.05),transparent_50%)]"></div>
+      {/* Background texture */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_45%),radial-gradient(circle_at_85%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
 
       <div className="relative max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-5">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-blue-700 mb-4">
             Our Infrastructure
           </h2>
-          <div className="w-20 h-[2px] bg-emerald-500 mx-auto mb-6"></div>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Our campus is designed to provide a balanced environment that
-            supports academic excellence, creativity, physical development,
-            and overall well-being.
+          <div className="w-24 h-[2px] bg-emerald-500 mx-auto mb-5" />
+          <p className="text-gray-600 text-base sm:text-lg">
+            A thoughtfully designed campus that supports learning, creativity,
+            fitness and overall growth.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Horizontal Scroll */}
+        <div
+          className="
+            flex gap-6 overflow-x-auto pb-6 px-1
+            snap-x snap-mandatory
+            scrollbar-hide
+          "
+        >
           {infrastructureData.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 border border-gray-200 
-                         shadow-[0_10px_30px_rgba(0,0,0,0.06)]
-                         hover:shadow-[0_20px_50px_rgba(16,185,129,0.15)]
-                         hover:border-emerald-300 transition-all duration-300"
+              className="
+                snap-start min-w-[300px] sm:min-w-[340px]
+                bg-white/80 backdrop-blur-xl
+                rounded-3xl p-8
+                border border-gray-200
+                shadow-[0_15px_40px_rgba(0,0,0,0.08)]
+                hover:shadow-[0_30px_60px_rgba(16,185,129,0.25)]
+                hover:-translate-y-2
+                transition-all duration-300
+                group
+              "
             >
               {/* Icon */}
-              <div className="w-16 h-16 flex items-center justify-center rounded-xl 
-                              bg-emerald-50 text-emerald-600 text-3xl mb-6
-                              group-hover:bg-emerald-600 group-hover:text-white
-                              transition-colors duration-300">
+              <div
+                className="
+                  w-16 h-16 flex items-center justify-center rounded-2xl
+                  bg-emerald-100 text-emerald-600 text-3xl mb-6
+                  group-hover:bg-emerald-600 group-hover:text-white
+                  transition-all duration-300
+                "
+              >
                 {item.icon}
               </div>
 
@@ -120,16 +136,23 @@ const Infrastructure = () => {
 
               {/* CTA */}
               <button
-                className="text-sm font-semibold text-emerald-600 
-                           border-b-2 border-emerald-500 pb-1
-                           hover:text-emerald-700 hover:border-emerald-700
-                           transition-colors"
+                className="
+                  text-sm font-semibold text-emerald-600
+                  inline-flex items-center gap-2
+                  group-hover:text-emerald-700
+                  transition-colors
+                "
               >
-                Learn More
+                {/* Explore More → */}
               </button>
             </div>
           ))}
         </div>
+
+        {/* Hint text */}
+        <p className="text-center text-sm text-gray-400 mt-4">
+          ← Scroll horizontally to explore →
+        </p>
 
       </div>
     </section>

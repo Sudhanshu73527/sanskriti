@@ -7,8 +7,12 @@ import Principal from './components/Principal/Principal'
 import Chairmain from './components/Chairman/Chairmain'
 import Fotter from './components/Fotter/Fotter'
 import Testi from './components/Testi/Testi'
-import StatsSection from './components/StatsSection/StatsSection'
-import SchoolPrompts from './components/SchoolPrompts/SchoolPrompts'
+// import SchoolPrompts from './components/SchoolPrompts/SchoolPrompts'
+import WhatWeProvide from './components/WhatWeProvide/WhatWeProvide'
+import UpcomingEvents from './components/UpcomingEvents/UpcomingEvents'
+import Ourfacilities from './components/ourfacilities/Ourfacilities'
+import AimSection from './components/AimSection/AimSection'
+import SchoolSections from './components/SchoolSections/SchoolSections'
 
 const App = () => {
   return (
@@ -18,9 +22,13 @@ const App = () => {
       <InfoCards/>
       <Principal/>
       <Chairmain/>
+      <WhatWeProvide/>
+      <UpcomingEvents/>
+      <AimSection/>
+      <SchoolSections/>
+      <Ourfacilities/>
       <SchoolFeatures/>
-      <StatsSection/>
-      <SchoolPrompts/>
+      {/* <SchoolPrompts/> */}
       <Testi/>
       <Fotter/>
     </div>

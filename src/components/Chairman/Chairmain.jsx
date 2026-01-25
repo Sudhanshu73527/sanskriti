@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import chairmanImg from "../../assets/pricipal2.jpg";
+import chairmanImg from "../../assets/aray6.png";
 
 const Chairman = () => {
   return (
@@ -98,7 +98,7 @@ const Chairman = () => {
 
               <div className="border-l border-amber-400/40 pl-6">
                 <p className="text-lg font-semibold text-white">
-                  Mr. R. K. Verma
+                  Mr. SK. Pathak
                 </p>
                 <p className="text-xs uppercase tracking-widest text-gray-400">
                   Chairman

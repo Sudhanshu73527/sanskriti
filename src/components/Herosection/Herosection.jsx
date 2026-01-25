@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 
-import img1 from "../../assets/inter1.webp";
-import img2 from "../../assets/inter2.webp";
+import img1 from "../../assets/aray1.webp";
+import img2 from "../../assets/aray2.webp";
 
 const images = [img1, img2];
 
@@ -56,7 +56,7 @@ const Herosection = () => {
           >
             Welcome to <br />
             <span className="text-yellow-400 drop-shadow-lg">
-              RC International School
+              Araybhat national public School
             </span>
           </motion.h1>
 

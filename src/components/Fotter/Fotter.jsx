@@ -4,141 +4,118 @@ import {
   FaInstagram,
   FaTwitter,
   FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 
-const Fotter = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 text-white py-14 font-playfair relative overflow-hidden">
-      {/* Decorative Glow Background */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-400 blur-3xl opacity-10"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-green-400 blur-3xl opacity-10"></div>
+    <footer className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-green-950 text-gray-300 font-outfit overflow-hidden">
+      
+      {/* Soft Decorative Glow */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-emerald-500/20 blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-green-600/20 blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+
         {/* School Info */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-3">
-            Sanskriti PUBLIC SCHOOL
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Sanskriti Public School
           </h2>
-          <p className="text-gray-300 leading-relaxed">
-            We nurture young minds with education, values, and skills to help
-            them grow into responsible global citizens.
+          <p className="leading-relaxed text-gray-400 text-sm">
+            Empowering young minds with quality education, strong values, and
+            modern skills to build confident, responsible global citizens.
           </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-3 mt-6">
+            {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn].map(
+              (Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-emerald-500 text-white transition-all duration-300"
+                >
+                  <Icon size={14} />
+                </a>
+              )
+            )}
+          </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold text-emerald-300 mb-4">
+          <h3 className="text-lg font-semibold text-white mb-4">
             Quick Links
           </h3>
-          <ul className="space-y-2">
-            <li>
-              <a
-                href="#about"
-                className="hover:text-emerald-400 transition-all"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#admissions"
-                className="hover:text-emerald-400 transition-all"
-              >
-                Admissions
-              </a>
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                className="hover:text-emerald-400 transition-all"
-              >
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:text-emerald-400 transition-all"
-              >
-                Contact
-              </a>
-            </li>
+          <ul className="space-y-3 text-sm">
+            {["About Us", "Admissions", "Academics", "Gallery", "Contact"].map(
+              (item, i) => (
+                <li key={i}>
+                  <a
+                    href="#"
+                    className="hover:text-emerald-400 transition-all"
+                  >
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
 
         {/* What We Offer */}
         <div>
-          <h3 className="text-xl font-semibold text-emerald-300 mb-4">
-            What We Offer
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Why Choose Us
           </h3>
-          <ul className="space-y-2">
-            <li>Holistic Education</li>
-            <li>Experienced Faculty</li>
-            <li>Modern Classrooms</li>
-            <li>Sports & Extracurriculars</li>
-            <li>Digital Learning Resources</li>
+          <ul className="space-y-3 text-sm">
+            <li>✔ Holistic & Value-Based Education</li>
+            <li>✔ Experienced & Caring Faculty</li>
+            <li>✔ Smart & Digital Classrooms</li>
+            <li>✔ Sports & Creative Activities</li>
+            <li>✔ Safe & Supportive Environment</li>
           </ul>
         </div>
 
-        {/* Subscribe Section */}
+        {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-semibold text-emerald-300 mb-4">
-            Stay Updated
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Contact Us
           </h3>
-          <p className="text-gray-300 mb-4">
-            Subscribe to receive latest updates, events & school news.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 rounded-full text-gray-900 focus:outline-none w-full"
-            />
-            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-full shadow-lg transition-all">
-              Subscribe
-            </button>
-          </div>
 
-          {/* Social Media Links */}
-          <div className="flex space-x-4 mt-5">
-            <a
-              href="#"
-              className="p-2 rounded-full bg-emerald-600 hover:bg-emerald-500 transition-all"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-emerald-600 hover:bg-emerald-500 transition-all"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-emerald-600 hover:bg-emerald-500 transition-all"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-emerald-600 hover:bg-emerald-500 transition-all"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
+          <ul className="space-y-4 text-sm">
+            <li className="flex items-start gap-3">
+              <FaMapMarkerAlt className="text-emerald-400 mt-1" />
+              <span>Ramnagar, Bihar – 845106</span>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <FaPhoneAlt className="text-emerald-400" />
+              <span>+91 70703 23285</span>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-emerald-400" />
+              <span>info@sanskritischool.in</span>
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-emerald-700 mt-10 pt-4 text-center text-gray-400">
-        <p>
-          © {new Date().getFullYear()} Sanskriti PUBLIC SCHOOL . All rights
-          reserved. | Powered by{" "}
-          <span className="text-emerald-300 font-semibold">Webala</span>
-        </p>
+      <div className="border-t border-white/10 py-4 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()} Sanskriti Public School. All rights reserved.  
+        <span className="block sm:inline">
+          {" "} | Powered by{" "}
+          <span className="text-emerald-400 font-semibold">Webala</span>
+        </span>
       </div>
     </footer>
   );
 };
 
-export default Fotter;
+export default Footer;
