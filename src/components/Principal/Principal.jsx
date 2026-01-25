@@ -62,7 +62,7 @@ const Principal = () => {
                 whileTap={{ scale: 0.96 }}
                 className="relative px-10 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#0b1220] bg-emerald-400 overflow-hidden group"
               >
-                <span className="relative z-10">Read Full Address</span>
+                <span className="relative z-10">Read Full Vision</span>
                 <span className="absolute inset-0 bg-emerald-300 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </motion.button>
 

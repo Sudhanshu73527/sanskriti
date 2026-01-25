@@ -9,7 +9,7 @@ import { MdSchool, MdScience } from "react-icons/md";
 
 const cardData = [
   {
-    title: "Academic Calendar 2025-26",
+    title: "Academic Calendar 2026-27",
     icon: <FaCalendarAlt className="text-3xl" />,
     gradient: "from-blue-500 via-indigo-500 to-purple-600",
     textColor: "text-blue-500",
