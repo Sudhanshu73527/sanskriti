@@ -86,7 +86,7 @@ const Navbar = () => {
           {/* Desktop Contact */}
           <div className="hidden lg:flex flex-col space-y-1 text-green-900">
             <span className="flex items-center gap-2">
-              <FaPhoneAlt className="text-yellow-500" /> +91-70703 23285
+              <FaPhoneAlt className="text-yellow-500" /> +91-99319 79868
             </span>
             <span className="flex items-center gap-2">
               <FaEnvelope className="text-yellow-500" /> araybhatnationalSchool@.in

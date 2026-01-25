@@ -68,7 +68,7 @@ const Principal = () => {
 
               <div className="border-l border-emerald-400/40 pl-6">
                 <p className="text-lg font-semibold text-white">
-                  Mr. SK. Sharma
+                  Mr. SK. Pathak
                 </p>
                 <p className="text-xs uppercase tracking-widest text-gray-400">
                   Principal

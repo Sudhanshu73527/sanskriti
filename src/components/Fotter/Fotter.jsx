@@ -90,17 +90,17 @@ const Footer = () => {
           <ul className="space-y-4 text-sm">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-emerald-400 mt-1" />
-              <span>Ramnagar, Bihar – 845106</span>
+              <span>Semra, Ramnagar (West Champaran), Bihar – 845106</span>
             </li>
 
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-emerald-400" />
-              <span>+91 70703 23285</span>
+              <span>+91-99319 79868</span>
             </li>
 
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-emerald-400" />
-              <span>info@sanskritischool.in</span>
+              <span>info@araybhatnationalpublichschool.in</span>
             </li>
           </ul>
         </div>
@@ -108,10 +108,10 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Sanskriti Public School. All rights reserved.  
+        © {new Date().getFullYear()} Araybhat national Public School. All rights reserved.  
         <span className="block sm:inline">
           {" "} | Powered by{" "}
-          <span className="text-emerald-400 font-semibold">Webala</span>
+          {/* <span className="text-emerald-400 font-semibold">Webala</span> */}
         </span>
       </div>
     </footer>
