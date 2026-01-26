@@ -23,7 +23,7 @@ const Footer = () => {
         {/* School Info */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">
-            Sanskriti Public School
+            Araybhat National Public School
           </h2>
           <p className="leading-relaxed text-gray-400 text-sm">
             Empowering young minds with quality education, strong values, and
