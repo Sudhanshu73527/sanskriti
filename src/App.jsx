@@ -13,6 +13,7 @@ import UpcomingEvents from './components/UpcomingEvents/UpcomingEvents'
 import Ourfacilities from './components/ourfacilities/Ourfacilities'
 import AimSection from './components/AimSection/AimSection'
 import SchoolSections from './components/SchoolSections/SchoolSections'
+import RCISSection from './components/RCISSection/RCISSection'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Navbar/> <br />
       <Herosection/>
       <InfoCards/>
+      <RCISSection/>
       <Principal/>
       <Chairmain/>
       <WhatWeProvide/>

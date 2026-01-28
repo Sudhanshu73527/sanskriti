@@ -79,10 +79,10 @@ const Infrastructure = () => {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-blue-700 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-yellow-400 mb-4">
             Our Infrastructure
           </h2>
-          <div className="w-24 h-[2px] bg-emerald-500 mx-auto mb-5" />
+          <div className="w-24 h-[2px] bg-yellow-400 mx-auto mb-5" />
           <p className="text-gray-600 text-base sm:text-lg">
             A thoughtfully designed campus that supports learning, creativity,
             fitness and overall growth.
@@ -116,7 +116,7 @@ const Infrastructure = () => {
               <div
                 className="
                   w-16 h-16 flex items-center justify-center rounded-2xl
-                  bg-emerald-100 text-emerald-600 text-3xl mb-6
+                  bg-yellow-400 text-yellow-800 text-3xl mb-6
                   group-hover:bg-emerald-600 group-hover:text-white
                   transition-all duration-300
                 "

@@ -28,10 +28,10 @@ const WhatWeProvide = () => {
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-24">
-          <h2 className="text-4xl sm:text-7xl font-semibold text-blue-600 mb-5">
+          <h2 className="text-4xl sm:text-7xl font-semibold text-yellow-500 mb-5">
             What We Provide
           </h2>
-          <div className="w-28 h-[3px] bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6" />
+          <div className="w-28 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-400 mx-auto mb-6" />
           <p className="text-gray-600 text-lg leading-relaxed">
             A thoughtfully designed environment that prioritizes safety,
             health and cleanliness to support your child’s holistic growth.
@@ -96,8 +96,8 @@ const WhatWeProvide = () => {
                     rounded-full
                     text-sm font-semibold
                     text-white
-                    bg-gradient-to-r from-blue-600 to-indigo-600
-                    hover:from-blue-700 hover:to-indigo-700
+                    bg-gradient-to-r from-yellow-600 to-yellow-500
+                    hover:from-slate-700 hover:to-indigo-700
                     transition-all duration-300
                     shadow-md
                   "

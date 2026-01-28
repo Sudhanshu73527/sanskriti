@@ -7,14 +7,14 @@ const AimSection = () => {
 
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-semibold text-blue-700 tracking-tight mb-5">
+          <h2 className="text-3xl md:text-5xl font-semibold text-yellow-400 tracking-tight mb-5">
             WE AIM: TO PREPARE THE STUDENT
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             to be intellectually competent to promote the development of
             intellectual skills and mastery of the academic requirements.
           </p>
-          <div className="w-16 h-[3px] bg-gradient-to-r from-gray-900 to-gray-500 mx-auto mt-7 rounded-full"></div>
+          <div className="w-16 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-400 mx-auto mt-7 rounded-full"></div>
         </div>
 
         {/* Cards */}

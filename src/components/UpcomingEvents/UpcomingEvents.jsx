@@ -39,10 +39,10 @@ const UpcomingEvents = () => {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl sm:text-7xl font-semibold text-blue-800 mb-4">
+          <h2 className="text-4xl sm:text-7xl font-semibold text-yellow-400 mb-4">
             Upcoming Events
           </h2>
-          <div className="w-28 h-[2px] bg-blue-600 mx-auto mb-6" />
+          <div className="w-28 h-[2px] bg-yellow-400 mx-auto mb-6" />
           <p className="text-gray-600 text-lg leading-relaxed">
             Carefully planned events that nurture patriotism, creativity,
             discipline and joyful learning experiences for our students.
@@ -83,7 +83,7 @@ const UpcomingEvents = () => {
                   absolute top-4 left-4
                   bg-white/90 backdrop-blur
                   px-4 py-1 rounded-full
-                  text-sm font-semibold text-blue-700
+                  text-sm font-semibold text-yellow-400
                   shadow
                 ">
                   {event.date}
@@ -103,8 +103,8 @@ const UpcomingEvents = () => {
                 <button
                   className="
                     inline-flex items-center gap-2
-                    text-sm font-semibold text-blue-600
-                    hover:text-blue-800
+                    text-sm font-semibold text-yellow-400
+                    hover:text-slate-800
                     transition-colors
                   "
                 >

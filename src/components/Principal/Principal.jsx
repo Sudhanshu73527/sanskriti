@@ -26,7 +26,7 @@ const Principal = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="lg:col-span-7 text-white"
           >
-            <span className="inline-block text-[11px] tracking-[0.45em] uppercase text-emerald-400 mb-8">
+            <span className="inline-block text-[11px] tracking-[0.45em] uppercase text-yellow-400 mb-8">
               Principal’s Message
             </span>
 
@@ -60,7 +60,7 @@ const Principal = () => {
               <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.96 }}
-                className="relative px-10 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#0b1220] bg-emerald-400 overflow-hidden group"
+                className="relative px-10 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#0b1220] bg-yellow-400 overflow-hidden group"
               >
                 <span className="relative z-10">Read Full Vision</span>
                 <span className="absolute inset-0 bg-emerald-300 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
