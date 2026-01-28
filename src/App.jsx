@@ -14,12 +14,14 @@ import Ourfacilities from './components/ourfacilities/Ourfacilities'
 import AimSection from './components/AimSection/AimSection'
 import SchoolSections from './components/SchoolSections/SchoolSections'
 import RCISSection from './components/RCISSection/RCISSection'
+import SchoolHighlight from './components/SchoolHighlight/SchoolHighlight'
 
 const App = () => {
   return (
     <div>
       <Navbar/> <br />
       <Herosection/>
+      <SchoolHighlight/>
       <InfoCards/>
       <RCISSection/>
       <Principal/>
