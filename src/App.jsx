@@ -19,7 +19,7 @@ import SchoolHighlight from './components/SchoolHighlight/SchoolHighlight'
 const App = () => {
   return (
     <div>
-      <Navbar/> <br />
+      <Navbar/> 
       <Herosection/>
       <SchoolHighlight/>
       <InfoCards/>

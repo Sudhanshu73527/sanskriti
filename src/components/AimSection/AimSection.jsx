@@ -1,85 +1,78 @@
 import React from "react";
+import { FaLightbulb, FaHandshake, FaStar } from "react-icons/fa";
 
 const AimSection = () => {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-[#FAF9F7] py-24 font-playfair">
       <div className="max-w-7xl mx-auto px-5">
 
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-semibold text-yellow-400 tracking-tight mb-5">
-            WE AIM: TO PREPARE THE STUDENT
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black tracking-wide">
+            WE AIM : TO <span className="text-yellow-400">PREPARE THE STUDENT</span>
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            to be intellectually competent to promote the development of
-            intellectual skills and mastery of the academic requirements.
+          <p className="max-w-3xl mx-auto mt-4 text-gray-500 text-lg leading-relaxed">
+            To be intellectually competent to promote the development of
+            intellectual skills and mastery of academic requirements.
           </p>
-          <div className="w-16 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-400 mx-auto mt-7 rounded-full"></div>
+          <div className="w-16 h-[2px] bg-yellow-400 mx-auto mt-6" />
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
+        <div className="grid md:grid-cols-3 gap-8">
 
           {/* WE BELIEVE */}
-          <div className="group relative bg-[#18b5a4] p-14 text-center text-white transition-all duration-500 hover:scale-[1.02]">
-            
-            {/* Glow */}
-            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></div>
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#DFF5F1] to-[#BFEAE1] p-10 shadow-lg hover:shadow-2xl transition">
+            <FaLightbulb className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#1E7F74]/20" />
 
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-wide mb-6">
+            <h3 className="text-2xl font-extrabold text-[#1E7F74] mb-4">
               WE BELIEVE
             </h3>
-
-            <p className="text-[15px] leading-relaxed text-white/95">
+            <p className="text-[#355F5B] text-lg leading-relaxed font-semibold">
               In a holistic approach to education that fosters intellectual
               curiosity, emotional resilience, and respect for all individuals,
               enabling students to become thoughtful and responsible citizens.
             </p>
 
-            {/* Watermark Icon */}
-            <div className="absolute bottom-6 right-6 text-white/15 text-7xl animate-bounce">
-              💡
-            </div>
+            <button className="mt-8 border border-[#1E7F74] px-6 py-2 rounded-full text-[#1E7F74] font-bold hover:bg-[#1E7F74] hover:text-white transition">
+              ++
+            </button>
           </div>
 
           {/* WE PLEDGE */}
-          <div className="group relative bg-[#1f2a3d] p-14 text-center text-white transition-all duration-500 hover:scale-[1.02]">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECEFF6] to-[#D6DEEE] p-10 shadow-lg hover:shadow-2xl transition">
+            <FaHandshake className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#2C3E5C]/20" />
 
-            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></div>
-
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-wide mb-6">
+            <h3 className="text-2xl font-extrabold text-[#2C3E5C] mb-4">
               WE PLEDGE
             </h3>
-
-            <p className="text-[15px] leading-relaxed text-white/95">
-              To nurture students' self-worth, dignity, and a strong sense of
+            <p className="text-[#3E4B66] text-lg leading-relaxed font-semibold">
+              To nurture students’ self-worth, dignity, and a strong sense of
               fairness. We encourage respect for diversity and empathy for all,
-              creating a safe and inclusive environment.
+              creating a safe, inclusive, and supportive environment.
             </p>
 
-            <div className="absolute bottom-6 right-6 text-white/15 text-7xl animate-bounce">
-              ⚙️
-            </div>
+            <button className="mt-8 border border-[#2C3E5C] px-6 py-2 rounded-full text-[#2C3E5C] font-bold hover:bg-[#2C3E5C] hover:text-white transition">
+              ++
+            </button>
           </div>
 
           {/* WE WANT */}
-          <div className="group relative bg-[#ef4444] p-14 text-center text-white transition-all duration-500 hover:scale-[1.02]">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#FFE6E6] to-[#FBCACA] p-10 shadow-lg hover:shadow-2xl transition ">
+            <FaStar className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#B33636]/20" />
 
-            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></div>
-
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-wide mb-6">
+            <h3 className="text-2xl font-extrabold text-[#B33636] mb-4">
               WE WANT
             </h3>
-
-            <p className="text-[15px] leading-relaxed text-white/95">
+            <p className="text-[#6B2A2A] text-lg leading-relaxed font-semibold">
               Our students to be confident, innovative, and kind. We aim to
               instill leadership qualities, social responsibility, and a
               lifelong love for learning.
             </p>
 
-            <div className="absolute bottom-6 right-6 text-white/15 text-7xl animate-bounce">
-              👍
-            </div>
+            <button className="mt-8 border border-[#B33636] px-6 py-2 rounded-full text-[#B33636] font-bold hover:bg-[#B33636] hover:text-white transition">
+              ++
+            </button>
           </div>
 
         </div>

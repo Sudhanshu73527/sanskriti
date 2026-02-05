@@ -131,9 +131,9 @@ const Herosection = () => {
           setChatStep("main");
           setSelectedClass("");
         }}
-        className="fixed bottom-24 right-6 bg-yellow-400 text-black px-4 py-3 rounded-full shadow-xl z-50 font-semibold"
+        className="fixed bottom-24 right-6 bg-yellow-400 text-white px-4 py-3 rounded-full shadow-xl z-50 font-semibold"
       >
-        Help
+       Quick Help
       </button>
 
       {/* AI CHAT MODAL */}
@@ -148,7 +148,7 @@ const Herosection = () => {
 
               <div className="p-4 overflow-y-auto flex-1 space-y-3 text-sm">
                 <div className="bg-gray-100 p-3 rounded-xl">
-                  <b>Sudhanhsu kumar Tiwari:</b><br />
+                  <b>Namaste, I am Sudhanhsu kumar Tiwari:</b><br />
                   mai aapki kya madad kar sakta hoon?
                 </div>
 

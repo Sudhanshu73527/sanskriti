@@ -8,37 +8,65 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/araybhat1.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
   const navItems = [
-    { name: "HOME" },
+    { name: "HOME", path: "/" },
     {
       name: "ABOUT US",
-      subItems: ["About School", "Chairman Message", "Principal Message"],
+      subItems: [
+        { label: "About School", path: "/about-school" },
+        { label: "Chairman Message", path: "/chairman-message" },
+        { label: "Principal Message", path: "/principal-message" },
+      ],
     },
     {
       name: "ACADEMICS",
-      subItems: ["Pre-Primary", "Primary", "Secondary", "Senior Secondary"],
+      subItems: [
+        { label: "Pre-Primary", path: "/academics/pre-primary" },
+        { label: "Primary", path: "/academics/primary" },
+        { label: "Secondary", path: "/academics/secondary" },
+        { label: "Senior Secondary", path: "/academics/senior-secondary" },
+      ],
     },
     {
       name: "ADMISSION",
-      subItems: ["Admission Process", "Fee Structure", "Online Registration"],
+      subItems: [
+        { label: "Admission Process", path: "/admission-process" },
+        { label: "Fee Structure", path: "/fee-structure" },
+        { label: "Online Registration", path: "/online-registration" },
+      ],
     },
     {
       name: "FACILITIES",
-      subItems: ["Library", "Laboratory", "Transport", "Sports"],
+      subItems: [
+        { label: "Library", path: "/facilities/library" },
+        { label: "Laboratory", path: "/facilities/laboratory" },
+        { label: "Transport", path: "/facilities/transport" },
+        { label: "Sports", path: "/facilities/sports" },
+      ],
     },
-    { name: "GALLERY" },
+    { name: "GALLERY", path: "/gallery" },
     {
       name: "EXTRA CURRICULUM",
-      subItems: ["Music", "Dance", "Yoga", "Art & Craft"],
+      subItems: [
+        { label: "Music", path: "/extra-curriculum/music" },
+        { label: "Dance", path: "/extra-curriculum/dance" },
+        { label: "Yoga", path: "/extra-curriculum/yoga" },
+        { label: "Art & Craft", path: "/extra-curriculum/art-craft" },
+      ],
     },
     {
       name: "MANDATORY PUBLIC DISCLOSURE",
-      subItems: ["CBSE Info", "Staff Details", "Affiliation"],
+      subItems: [
+        { label: "CBSE Info", path: "/mandatory/cbse-info" },
+        { label: "Staff Details", path: "/mandatory/staff-details" },
+        { label: "Affiliation", path: "/mandatory/affiliation" },
+      ],
     },
   ];
 
@@ -99,7 +127,8 @@ const Navbar = () => {
               <FaPhoneAlt className="text-yellow-500" /> +91-99319 79868
             </span>
             <span className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-500" /> araybhatnationalSchool@.in
+              <FaEnvelope className="text-yellow-500" />{" "}
+              araybhatnationalSchool@.in
             </span>
           </div>
 
@@ -124,17 +153,19 @@ const Navbar = () => {
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-yellow-400 group-hover:w-full transition-all"></span>
 
               {item.subItems && (
-                <ul className="absolute top-full left-0 mt-3 bg-white text-gray-800 shadow-xl rounded-xl min-w-[240px]
+                <ul
+                  className="absolute top-full left-0 mt-3 bg-white text-gray-800 shadow-xl rounded-xl min-w-[240px]
                                opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                               transition-all duration-300 z-50 border border-gray-100">
+                               transition-all duration-300 z-50 border border-gray-100"
+                >
                   {item.subItems.map((sub, idx) => (
                     <li
                       key={idx}
                       className="px-5 py-3 text-sm font-medium flex items-center gap-2
-                                 hover:bg-green-50 hover:text-green-800 transition-all"
+               hover:bg-green-50 hover:text-green-800 transition-all"
                     >
                       <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                      {sub}
+                      <Link to={sub.path}>{sub.label}</Link>
                     </li>
                   ))}
                 </ul>

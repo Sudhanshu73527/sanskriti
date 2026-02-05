@@ -1,158 +1,81 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaChalkboardTeacher,
   FaFlask,
+  FaDesktop,
   FaUtensils,
   FaBookOpen,
   FaBasketballBall,
   FaMusic,
   FaPaintBrush,
   FaBus,
+  FaHeartbeat,
   FaLeaf,
 } from "react-icons/fa";
 
 const infrastructureData = [
-  {
-    icon: <FaChalkboardTeacher />,
-    title: "Mathematics Lab",
-    description:
-      "Advanced tools and digital aids to strengthen logical thinking and problem-solving skills.",
-  },
-  {
-    icon: <FaFlask />,
-    title: "Science Laboratories",
-    description:
-      "Well-equipped Physics, Chemistry and Biology labs for practical-based learning.",
-  },
-  {
-    icon: <FaUtensils />,
-    title: "Hygienic Canteen",
-    description:
-      "Nutritious, balanced and hygienically prepared meals for students and staff.",
-  },
-  {
-    icon: <FaBookOpen />,
-    title: "Library & Resource Centre",
-    description:
-      "Extensive collection of books, journals and digital learning resources.",
-  },
-  {
-    icon: <FaBasketballBall />,
-    title: "Sports Infrastructure",
-    description:
-      "Indoor and outdoor sports facilities to promote fitness and teamwork.",
-  },
-  {
-    icon: <FaMusic />,
-    title: "Music Room",
-    description:
-      "Dedicated space for vocal and instrumental music education.",
-  },
-  {
-    icon: <FaPaintBrush />,
-    title: "Art & Craft Studio",
-    description:
-      "Creative environment to nurture imagination and artistic expression.",
-  },
-  {
-    icon: <FaBus />,
-    title: "Safe Transportation",
-    description:
-      "GPS-enabled buses with trained staff ensuring student safety.",
-  },
-  {
-    icon: <FaLeaf />,
-    title: "Eco-Friendly Campus",
-    description:
-      "Green surroundings promoting environmental awareness and sustainability.",
-  },
+  { icon: <FaDesktop />, title: "Computer Labs", description: "Modern computer labs equipped with updated systems to support digital learning." },
+  { icon: <FaFlask />, title: "Science Labs", description: "Well-structured Physics, Chemistry & Biology labs for practical experiments." },
+  { icon: <FaChalkboardTeacher />, title: "Maths Lab", description: "Interactive learning tools to strengthen logical thinking and problem-solving." },
+  { icon: <FaBookOpen />, title: "Library", description: "A peaceful space with books, journals, and study resources for students." },
+  { icon: <FaBasketballBall />, title: "Sports Facilities", description: "Playgrounds and sports areas to encourage fitness and teamwork." },
+  { icon: <FaMusic />, title: "Music Room", description: "Dedicated space for musical training and creative expression." },
+  { icon: <FaPaintBrush />, title: "Art & Craft", description: "Creative studio for drawing, painting, and artistic development." },
+  { icon: <FaUtensils />, title: "Canteen", description: "Clean and hygienic food facilities for students and staff." },
+  { icon: <FaBus />, title: "Transport", description: "Safe and reliable transport services covering nearby areas." },
+  { icon: <FaHeartbeat />, title: "Medical Room", description: "Basic medical care with first-aid and health support on campus." },
+  { icon: <FaLeaf />, title: "Eco Garden", description: "Green environment promoting environmental awareness and care." },
 ];
 
 const Infrastructure = () => {
   return (
-    <section className="relative bg-[#f7faf8] py-24 px-4 font-playfair overflow-hidden">
-      
-      {/* Background texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.08),transparent_45%),radial-gradient(circle_at_85%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
+    <section className="bg-[#FAFAFA] py-24 font-playfair">
+      <div className="max-w-7xl mx-auto px-5">
 
-      <div className="relative max-w-7xl mx-auto">
-
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-yellow-400 mb-4">
-            Our Infrastructure
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black">
+            Our <span className="text-yellow-400">Infrastructure</span>
           </h2>
-          <div className="w-24 h-[2px] bg-yellow-400 mx-auto mb-5" />
-          <p className="text-gray-600 text-base sm:text-lg">
-            A thoughtfully designed campus that supports learning, creativity,
-            fitness and overall growth.
+          <p className="mt-4 max-w-3xl mx-auto text-gray-500 text-lg">
+            Carefully designed facilities that support academic excellence,
+            creativity, and holistic growth.
           </p>
         </div>
 
-        {/* Horizontal Scroll */}
-        <div
-          className="
-            flex gap-6 overflow-x-auto pb-6 px-1
-            snap-x snap-mandatory
-            scrollbar-hide
-          "
-        >
+        {/* Cards */}
+        <div className="flex gap-8 overflow-x-auto pb-6 no-scrollbar">
           {infrastructureData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="
-                snap-start min-w-[300px] sm:min-w-[340px]
-                bg-white/80 backdrop-blur-xl
-                rounded-3xl p-8
-                border border-gray-200
-                shadow-[0_15px_40px_rgba(0,0,0,0.08)]
-                hover:shadow-[0_30px_60px_rgba(16,185,129,0.25)]
-                hover:-translate-y-2
-                transition-all duration-300
-                group
-              "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="min-w-[300px] max-w-[300px] bg-white rounded-3xl 
+                         border border-gray-200 px-8 py-10 text-center
+                         shadow-sm hover:shadow-lg hover:-translate-y-1
+                         transition-all duration-300"
             >
               {/* Icon */}
-              <div
-                className="
-                  w-16 h-16 flex items-center justify-center rounded-2xl
-                  bg-yellow-400 text-yellow-800 text-3xl mb-6
-                  group-hover:bg-emerald-600 group-hover:text-white
-                  transition-all duration-300
-                "
-              >
+              <div className="mx-auto w-20 h-20 rounded-full 
+                              bg-gradient-to-br from-yellow-400 to-yellow-600
+                              flex items-center justify-center text-[#7A5C3E] 
+                              text-3xl mb-6 shadow-sm">
                 {item.icon}
               </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-yellow-400 mb-3">
                 {item.title}
               </h3>
 
-              {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              <p className="text-sm text-gray-600 leading-relaxed">
                 {item.description}
               </p>
-
-              {/* CTA */}
-              <button
-                className="
-                  text-sm font-semibold text-emerald-600
-                  inline-flex items-center gap-2
-                  group-hover:text-emerald-700
-                  transition-colors
-                "
-              >
-                {/* Explore More → */}
-              </button>
-            </div>
+            </motion.div>
           ))}
         </div>
-
-        {/* Hint text */}
-        <p className="text-center text-sm text-gray-400 mt-4">
-          ← Scroll horizontally to explore →
-        </p>
 
       </div>
     </section>
