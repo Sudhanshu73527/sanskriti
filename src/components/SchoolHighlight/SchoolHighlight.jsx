@@ -16,9 +16,9 @@ const SchoolHighlight = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-2xl md:text-3xl font-extrabold text-green-800 tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-yellow-600 tracking-wide">
             Araybhat international public school
-            <span className="block text-green-700 mt-1">
+            <span className="block text-yellow-600 mt-1">
               Best CBSE School in Semra, Ramnagar
             </span>
           </h2>

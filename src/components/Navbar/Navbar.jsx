@@ -20,7 +20,8 @@ const Navbar = () => {
       name: "ABOUT US",
       subItems: [
         { label: "About School", path: "/about-school" },
-        { label: "Chairman Message", path: "/chairman-message" },
+        { label: "Vision&Mission", path: "/visionmission" },
+        { label: "Our Infrastructure", path: "/Infrastructure" },
         { label: "Principal Message", path: "/principal-message" },
       ],
     },
@@ -61,7 +62,7 @@ const Navbar = () => {
       ],
     },
     {
-      name: "MANDATORY PUBLIC DISCLOSURE",
+      name: "MANDATORY DETAILS",
       subItems: [
         { label: "CBSE Info", path: "/mandatory/cbse-info" },
         { label: "Staff Details", path: "/mandatory/staff-details" },
@@ -73,7 +74,7 @@ const Navbar = () => {
   return (
     <header className="w-full shadow-md font-outfit top-0 z-50">
       {/* 🔹 Top Bar */}
-      <div className="bg-green-900 text-white text-xs md:text-sm hidden md:block">
+      <div className="bg-yellow-500 text-white text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-2">
@@ -93,7 +94,7 @@ const Navbar = () => {
             <span className="flex items-center space-x-2 cursor-pointer hover:text-yellow-400 transition">
               <FaLock /> <span>Login</span>
             </span>
-            <button className="bg-yellow-400 text-black font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
+            <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
               APPLY NOW
             </button>
           </div>

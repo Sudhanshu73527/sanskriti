@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
+// import Navbar from './components/Navbar/Navbar'
 import Herosection from './components/Herosection/Herosection'
 import InfoCards from './components/Infocards/Infocards'
 import SchoolFeatures from './components/SchoolFeatures/SchoolFeatures'
 import Principal from './components/Principal/Principal'
 import Chairmain from './components/Chairman/Chairmain'
-import Fotter from './components/Fotter/Fotter'
+// import Fotter from './components/Fotter/Fotter'
 import Testi from './components/Testi/Testi'
 // import SchoolPrompts from './components/SchoolPrompts/SchoolPrompts'
 import WhatWeProvide from './components/WhatWeProvide/WhatWeProvide'
@@ -16,10 +16,11 @@ import SchoolSections from './components/SchoolSections/SchoolSections'
 import RCISSection from './components/RCISSection/RCISSection'
 import SchoolHighlight from './components/SchoolHighlight/SchoolHighlight'
 
+
 const App = () => {
   return (
     <div>
-      <Navbar/> 
+      {/* <Navbar/>  */}
       <Herosection/>
       <SchoolHighlight/>
       <InfoCards/>
@@ -34,7 +35,7 @@ const App = () => {
       <SchoolFeatures/>
       {/* <SchoolPrompts/> */}
       <Testi/>
-      <Fotter/>
+      {/* <Fotter/> */}
     </div>
   )
 }

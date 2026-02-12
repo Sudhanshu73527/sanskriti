@@ -2,16 +2,24 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 
-import img1 from "../../assets/aray1.webp";
-import img2 from "../../assets/aray2.webp";
+/* ===== IMPORT YOUR IMAGES ===== */
 
-const images = [img1, img2];
+// Desktop Image (Wide, high quality)
+import desktopImg from "../../assets/bhat12.png";
+
+// Mobile Images (Vertical / optimized)
+import mobileImg1 from "../../assets/bhat11.jpeg";
+import mobileImg2 from "../../assets/bhat8.jpeg";
+
+const desktopImages = [desktopImg];
+const mobileImages = [mobileImg1, mobileImg2];
 
 const classList = [
   "Nursery","LKG","UKG","Class 1","Class 2","Class 3",
   "Class 4","Class 5","Class 6","Class 7","Class 8",
   "Class 9","Class 10"
 ];
+
 
 const admissionInfo = {
   Nursery: "Age 3+ required. Birth certificate & Aadhaar needed.",
@@ -56,23 +64,45 @@ const schoolFacilities = [
 
 const Herosection = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const [openChat, setOpenChat] = useState(false);
   const [chatStep, setChatStep] = useState("main");
   const [selectedClass, setSelectedClass] = useState("");
 
+  /* ===== SCREEN DETECTION ===== */
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000);
-    return () => clearInterval(timer);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  /* ===== IMAGE SLIDER ===== */
+  useEffect(() => {
+    const activeImages = isMobile ? mobileImages : desktopImages;
+
+    const timer = setInterval(() => {
+      setCurrent((prev) =>
+        prev === activeImages.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isMobile]);
+
+  const activeImages = isMobile ? mobileImages : desktopImages;
 
   return (
     <section className="relative w-full h-[90vh] overflow-hidden font-outfit">
+      
+      {/* IMAGE SLIDER */}
       <AnimatePresence mode="wait">
         <motion.img
           key={current}
-          src={images[current]}
+          src={activeImages[current]}
           alt="School Campus"
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -82,9 +112,10 @@ const Herosection = () => {
         />
       </AnimatePresence>
 
+      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/50 to-black/20" />
 
-      {/* HERO CONTENT (UNCHANGED) */}
+      {/* HERO CONTENT */}
       <div className="relative z-10 h-full flex items-center justify-center px-6">
         <div className="max-w-4xl text-center text-white">
           <span className="inline-block mb-4 px-5 py-2 text-sm rounded-full bg-yellow-400/20 text-yellow-300 border border-yellow-400/30">
@@ -94,7 +125,7 @@ const Herosection = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold">
             Welcome to <br />
             <span className="text-yellow-400">
-              Araybhat National Public School
+              Aryabhatta National Public School
             </span>
           </h1>
 
@@ -114,7 +145,7 @@ const Herosection = () => {
         </div>
       </div>
 
-      {/* WhatsApp */}
+      {/* WHATSAPP BUTTON */}
       <a
         href="https://wa.me/917352205506"
         target="_blank"
@@ -124,7 +155,7 @@ const Herosection = () => {
         <FaWhatsapp size={26} />
       </a>
 
-      {/* AI Button */}
+      {/* QUICK HELP BUTTON */}
       <button
         onClick={() => {
           setOpenChat(true);
@@ -133,14 +164,15 @@ const Herosection = () => {
         }}
         className="fixed bottom-24 right-6 bg-yellow-400 text-white px-4 py-3 rounded-full shadow-xl z-50 font-semibold"
       >
-       Quick Help
+        Quick Help
       </button>
 
-      {/* AI CHAT MODAL */}
+      {/* CHAT MODAL */}
       <AnimatePresence>
         {openChat && (
           <motion.div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
             <motion.div className="bg-white w-full max-w-md rounded-2xl shadow-2xl max-h-[80vh] flex flex-col overflow-hidden">
+              
               <div className="bg-yellow-400 px-5 py-4 flex justify-between">
                 <b>School Assistant</b>
                 <button onClick={() => setOpenChat(false)}>✖</button>
@@ -148,16 +180,16 @@ const Herosection = () => {
 
               <div className="p-4 overflow-y-auto flex-1 space-y-3 text-sm">
                 <div className="bg-gray-100 p-3 rounded-xl">
-                  <b>Namaste, I am Sudhanhsu kumar Tiwari:</b><br />
-                  mai aapki kya madad kar sakta hoon?
+                  <b>Namaste:</b><br />
+                  Mai aapki kya madad kar sakta hoon?
                 </div>
 
                 {chatStep === "main" && (
                   <>
-                    <button onClick={() => setChatStep("admission")} className="w-full border rounded-lg py-2"> Admission Information</button>
-                    <button onClick={() => setChatStep("fee")} className="w-full border rounded-lg py-2"> Fee Structure</button>
-                    <button onClick={() => setChatStep("facilities")} className="w-full border rounded-lg py-2"> School Facilities</button>
-                    <button onClick={() => setChatStep("executive")} className="w-full border rounded-lg py-2"> Talk with Executive</button>
+                    <button onClick={() => setChatStep("admission")} className="w-full border rounded-lg py-2">Admission Information</button>
+                    <button onClick={() => setChatStep("fee")} className="w-full border rounded-lg py-2">Fee Structure</button>
+                    <button onClick={() => setChatStep("facilities")} className="w-full border rounded-lg py-2">School Facilities</button>
+                    <button onClick={() => setChatStep("executive")} className="w-full border rounded-lg py-2">Talk with Executive</button>
                   </>
                 )}
 
@@ -191,7 +223,13 @@ const Herosection = () => {
                 )}
 
                 {chatStep !== "main" && (
-                  <button onClick={() => { setChatStep("main"); setSelectedClass(""); }} className="w-full border rounded-lg py-2">
+                  <button
+                    onClick={() => {
+                      setChatStep("main");
+                      setSelectedClass("");
+                    }}
+                    className="w-full border rounded-lg py-2"
+                  >
                     ⬅ Back
                   </button>
                 )}
@@ -200,6 +238,7 @@ const Herosection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
     </section>
   );
 };
