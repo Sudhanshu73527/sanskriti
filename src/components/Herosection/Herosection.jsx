@@ -4,10 +4,10 @@ import { FaWhatsapp } from "react-icons/fa";
 
 /* ===== IMPORT YOUR IMAGES ===== */
 
-// Desktop Image (Wide, high quality)
+// Desktop Image
 import desktopImg from "../../assets/bhat12.png";
 
-// Mobile Images (Vertical / optimized)
+// Mobile Images
 import mobileImg1 from "../../assets/bhat11.jpeg";
 import mobileImg2 from "../../assets/bhat8.jpeg";
 
@@ -19,7 +19,6 @@ const classList = [
   "Class 4","Class 5","Class 6","Class 7","Class 8",
   "Class 9","Class 10"
 ];
-
 
 const admissionInfo = {
   Nursery: "Age 3+ required. Birth certificate & Aadhaar needed.",
@@ -97,7 +96,7 @@ const Herosection = () => {
 
   return (
     <section className="relative w-full h-[90vh] overflow-hidden font-outfit">
-      
+
       {/* IMAGE SLIDER */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -112,36 +111,39 @@ const Herosection = () => {
         />
       </AnimatePresence>
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/50 to-black/20" />
+      {/* DARK OVERLAY (Improved for Mobile Readability) */}
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-br from-black/85 via-black/60 to-black/30" />
 
       {/* HERO CONTENT */}
-      <div className="relative z-10 h-full flex items-center justify-center px-6">
+      <div className="relative z-10 h-full flex items-center justify-center px-4 md:px-6">
         <div className="max-w-4xl text-center text-white">
-          <span className="inline-block mb-4 px-5 py-2 text-sm rounded-full bg-yellow-400/20 text-yellow-300 border border-yellow-400/30">
+
+          <span className="inline-block mb-4 px-5 py-2 text-xs sm:text-sm rounded-full bg-yellow-400/20 text-yellow-300 border border-yellow-400/30">
             Excellence in Education
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
             Welcome to <br />
-            <span className="text-yellow-400">
+            <span className="text-yellow-400 drop-shadow-lg">
               Aryabhatta National Public School
             </span>
           </h1>
 
-          <p className="mt-6 text-base md:text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-200 max-w-xl mx-auto leading-relaxed">
             A modern learning environment focused on academic excellence,
             discipline, innovation, and holistic student development.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+            <button className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg w-full sm:w-auto">
               View Admissions
             </button>
-            <button className="border border-white/40 text-white px-8 py-3 rounded-full">
+
+            <button className="border border-white/40 text-white px-8 py-3 rounded-full w-full sm:w-auto backdrop-blur-sm">
               Download Prospectus
             </button>
           </div>
+
         </div>
       </div>
 
@@ -150,7 +152,7 @@ const Herosection = () => {
         href="https://wa.me/917352205506"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl z-50"
+        className="fixed bottom-5 right-4 md:bottom-6 md:right-6 bg-green-500 text-white p-4 rounded-full shadow-xl z-50 scale-95 md:scale-100"
       >
         <FaWhatsapp size={26} />
       </a>
@@ -162,17 +164,17 @@ const Herosection = () => {
           setChatStep("main");
           setSelectedClass("");
         }}
-        className="fixed bottom-24 right-6 bg-yellow-400 text-white px-4 py-3 rounded-full shadow-xl z-50 font-semibold"
+        className="fixed bottom-20 right-4 md:bottom-24 md:right-6 bg-yellow-400 text-white px-4 py-3 rounded-full shadow-xl z-50 font-semibold text-sm md:text-base"
       >
         Quick Help
       </button>
 
-      {/* CHAT MODAL */}
+      {/* CHAT MODAL (UNCHANGED DESIGN) */}
       <AnimatePresence>
         {openChat && (
           <motion.div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
             <motion.div className="bg-white w-full max-w-md rounded-2xl shadow-2xl max-h-[80vh] flex flex-col overflow-hidden">
-              
+
               <div className="bg-yellow-400 px-5 py-4 flex justify-between">
                 <b>School Assistant</b>
                 <button onClick={() => setOpenChat(false)}>✖</button>

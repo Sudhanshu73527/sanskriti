@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import principalImg from "../../assets/aray6.png";
+import principalImg from "../../assets/shri1.png";
 
 const Principal = () => {
   return (
@@ -68,7 +68,7 @@ const Principal = () => {
 
               <div className="border-l border-emerald-400/40 pl-6">
                 <p className="text-lg font-semibold text-white">
-                  Mr. SK. Pathak
+                  Mr. SHRI SAH
                 </p>
                 <p className="text-xs uppercase tracking-widest text-gray-400">
                   Principal

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import chairmanImg from "../../assets/aray6.png";
+import chairmanImg from "../../assets/pathak.jpeg";
 
 const Chairman = () => {
   return (
@@ -41,7 +41,7 @@ const Chairman = () => {
 
               {/* Tag */}
               <div className="absolute -top-6 left-0 bg-amber-400 text-[#0b1220] text-xs tracking-widest px-5 py-2 uppercase font-semibold">
-                Chairman
+                Foundar and Chairperson
               </div>
             </div>
           </motion.div>
@@ -55,7 +55,7 @@ const Chairman = () => {
             className="lg:col-span-7 text-white"
           >
             <span className="block text-[11px] tracking-[0.45em] uppercase text-amber-400 mb-8">
-              Message from the Chairman
+              Message from the Foundar and Chairperson
             </span>
 
             <h2 className="text-4xl sm:text-5xl xl:text-[56px] font-medium leading-[1.15] mb-10">
@@ -101,7 +101,7 @@ const Chairman = () => {
                   Mr. SK. Pathak
                 </p>
                 <p className="text-xs uppercase tracking-widest text-gray-400">
-                  Chairman
+                  Foundar
                 </p>
               </div>
 
