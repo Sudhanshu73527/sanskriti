@@ -8,8 +8,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import desktopImg from "../../assets/bhat12.png";
 
 // Mobile Images
-import mobileImg1 from "../../assets/bhat11.jpeg";
-import mobileImg2 from "../../assets/bhat8.jpeg";
+import mobileImg1 from "../../assets/aryy1.png";
+import mobileImg2 from "../../assets/aryy2.png";
 
 const desktopImages = [desktopImg];
 const mobileImages = [mobileImg1, mobileImg2];
