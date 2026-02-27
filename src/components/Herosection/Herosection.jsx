@@ -10,6 +10,7 @@ import desktopImg from "../../assets/bhat12.png";
 // Mobile Images
 import mobileImg1 from "../../assets/aryy1.png";
 import mobileImg2 from "../../assets/aryy2.png";
+import { Link } from "react-router-dom";
 
 const desktopImages = [desktopImg];
 const mobileImages = [mobileImg1, mobileImg2];
@@ -135,13 +136,18 @@ const Herosection = () => {
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
-            <button className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg w-full sm:w-auto">
+          <Link to={"/admission-process"}>
+            <button className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg w-full sm:w-auto cursor-pointer">
               View Admissions
             </button>
-
+          </Link>
+            
+          <Link to={"/academics/prospectus"}>
             <button className="border border-white/40 text-white px-8 py-3 rounded-full w-full sm:w-auto backdrop-blur-sm">
               Download Prospectus
             </button>
+          </Link>
+            
           </div>
 
         </div>

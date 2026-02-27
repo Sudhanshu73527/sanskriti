@@ -2,7 +2,7 @@ import React from 'react'
 // import Navbar from './components/Navbar/Navbar'
 import Herosection from './components/Herosection/Herosection'
 import InfoCards from './components/Infocards/Infocards'
-import SchoolFeatures from './components/SchoolFeatures/SchoolFeatures'
+// import SchoolFeatures from './components/SchoolFeatures/SchoolFeatures'
 import Principal from './components/Principal/Principal'
 import Chairmain from './components/Chairman/Chairmain'
 // import Fotter from './components/Fotter/Fotter'
@@ -12,7 +12,7 @@ import WhatWeProvide from './components/WhatWeProvide/WhatWeProvide'
 import UpcomingEvents from './components/UpcomingEvents/UpcomingEvents'
 import Ourfacilities from './components/ourfacilities/Ourfacilities'
 import AimSection from './components/AimSection/AimSection'
-import SchoolSections from './components/SchoolSections/SchoolSections'
+// import SchoolSections from './components/SchoolSections/SchoolSections'
 import RCISSection from './components/RCISSection/RCISSection'
 import SchoolHighlight from './components/SchoolHighlight/SchoolHighlight'
 import Schoolevents from './components/Schoolevents/Schoolevents'
@@ -32,9 +32,9 @@ const App = () => {
       <WhatWeProvide/>
       <UpcomingEvents/>
       <AimSection/>
-      <SchoolSections/>
+      {/* <SchoolSections/> */}
       <Ourfacilities/>
-      <SchoolFeatures/>
+      {/* <SchoolFeatures/> */}
       {/* <SchoolPrompts/> */}
       <Testi/>
       {/* <Fotter/> */}

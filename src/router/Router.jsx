@@ -12,6 +12,9 @@ import Admissionprocess from "../pages/admission/Admissionprocess";
 import Onlineregistrartion from "../pages/admission/Onlineregistrartion";
 import Teacherdetails from "../pages/about/Teacherdetails";
 import Admissionnotification from "../pages/admission/Admissionnotification";
+import Feestructure from "../pages/mandatory/Feestructure";
+import Studentdetails from "../pages/mandatory/Studentdetails";
+import Prospectus from "../pages/Prospectus";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,9 @@ const router = createBrowserRouter([
       {path: "/online-registration", element: <Onlineregistrartion/>},
       {path: "/teacher", element: <Teacherdetails/>},
       {path: "/notification", element: <Admissionnotification/>},
+      {path:"/mandatory/fee", element: <Feestructure/>},
+      {path: "/mandatory/student", element: <Studentdetails/>},
+      {path: "/academics/prospectus", element: <Prospectus/>},
     ],
   },
 ]);

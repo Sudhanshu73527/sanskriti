@@ -8,7 +8,8 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/araybhat1.png";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
+import { label, path } from "framer-motion/client";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
         { label: "About School", path: "/about-school" },
         { label: "Vision&Mission", path: "/visionmission" },
         { label: "Our Infrastructure", path: "/Infrastructure" },
-        { label: "Teacher Details", path: "/teacher" },
+        { label: "Our Faculty", path: "/teacher" },
         { label: "RTE", path: "/rte" },
       ],
     },
@@ -33,6 +34,7 @@ const Navbar = () => {
         { label: "Primary", path: "/academics/primary" },
         { label: "Secondary", path: "/academics/secondary" },
         { label: "Senior Secondary", path: "/academics/senior-secondary" },
+        { label: "Procpectus", path: "/academics/prospectus" },
       ],
     },
     {
@@ -68,6 +70,9 @@ const Navbar = () => {
         { label: "CBSE Info", path: "/mandatory/cbse-info" },
         { label: "Staff Details", path: "/mandatory/staff-details" },
         { label: "Affiliation", path: "/mandatory/affiliation" },
+        { label: "Fee Structure", path: "/mandatory/fee" },
+        { label: "Student Details", path: "/mandatory/student"}
+
       ],
     },
   ];
@@ -90,15 +95,21 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-6">
-            <span className="cursor-pointer hover:text-yellow-400 transition">
+          <Link to={"/online-registration"}>
+             <span className="cursor-pointer hover:text-yellow-400 transition">
               CBSE
             </span>
+          </Link>
+          
             <span className="flex items-center space-x-2 cursor-pointer hover:text-yellow-400 transition">
               <FaLock /> <span>Login</span>
             </span>
-            <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
+            <Link to={"/online-registration"}>
+               <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
               APPLY NOW
             </button>
+            </Link>
+           
           </div>
         </div>
       </div>
