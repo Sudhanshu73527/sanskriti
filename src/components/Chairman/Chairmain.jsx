@@ -41,7 +41,7 @@ const Chairman = () => {
 
               {/* Tag */}
               <div className="absolute -top-6 left-0 bg-amber-400 text-[#0b1220] text-xs tracking-widest px-5 py-2 uppercase font-semibold">
-                Foundar and Chairperson
+                Founder & Chairperson 
               </div>
             </div>
           </motion.div>
@@ -98,10 +98,10 @@ const Chairman = () => {
 
               <div className="border-l border-amber-400/40 pl-6">
                 <p className="text-lg font-semibold text-white">
-                  Mr. SK. Pathak
+                  Lt Col Mr. SK. Pathak
                 </p>
                 <p className="text-xs uppercase tracking-widest text-gray-400">
-                  Foundar
+                  Founder & Chairperson 
                 </p>
               </div>
 

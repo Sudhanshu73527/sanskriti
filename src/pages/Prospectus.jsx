@@ -57,7 +57,7 @@ const Prospectus = () => {
 
               {/* Download Button */}
               <a
-                href="/pathakji.pdf"
+                href="/Aryabhatta.pdf"
                 download
                 className="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition"
               >

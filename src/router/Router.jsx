@@ -15,6 +15,10 @@ import Admissionnotification from "../pages/admission/Admissionnotification";
 import Feestructure from "../pages/mandatory/Feestructure";
 import Studentdetails from "../pages/mandatory/Studentdetails";
 import Prospectus from "../pages/Prospectus";
+import Parentsenquiry from "../pages/admission/Parentsenquiry";
+import Library from "../pages/Facilities/Library";
+import Transport from "../pages/Facilities/Transport";
+import Sports from "../pages/Facilities/Sports";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,10 @@ const router = createBrowserRouter([
       {path:"/mandatory/fee", element: <Feestructure/>},
       {path: "/mandatory/student", element: <Studentdetails/>},
       {path: "/academics/prospectus", element: <Prospectus/>},
+      {path:"/enquiry-form", element: <Parentsenquiry/>},
+      {path:"/facilities/library", element: <Library/>},
+      {path: "/facilities/transport", element: <Transport/>},
+      {path: "/facilities/sports", element: <Sports/>}
     ],
   },
 ]);

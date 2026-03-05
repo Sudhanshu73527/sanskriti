@@ -41,15 +41,15 @@ const Navbar = () => {
       name: "ADMISSION",
       subItems: [
         { label: "Admission Process", path: "/admission-process" },
-        { label: "Admission Notification", path: "/notification" },
         { label: "Online Registration", path: "/online-registration" },
+        { label: "Admission Notification", path: "/notification" },
+        { label: "Parents Enquiry Form", path: "/enquiry-form" },
       ],
     },
     {
       name: "FACILITIES",
       subItems: [
         { label: "Library", path: "/facilities/library" },
-        { label: "Laboratory", path: "/facilities/laboratory" },
         { label: "Transport", path: "/facilities/transport" },
         { label: "Sports", path: "/facilities/sports" },
       ],
@@ -68,7 +68,6 @@ const Navbar = () => {
       name: "MANDATORY DETAILS",
       subItems: [
         { label: "CBSE Info", path: "/mandatory/cbse-info" },
-        { label: "Staff Details", path: "/mandatory/staff-details" },
         { label: "Affiliation", path: "/mandatory/affiliation" },
         { label: "Fee Structure", path: "/mandatory/fee" },
         { label: "Student Details", path: "/mandatory/student"}
@@ -120,13 +119,13 @@ const Navbar = () => {
           <div className="flex items-center gap-2 md:gap-3 min-w-0">
             <img src={logo} alt="logo" className="h-14 md:h-20 w-auto" />
             <h1 className="text-sm font-bold text-green-800 uppercase md:hidden truncate">
-              Araybhat National Public School
+              Aryabhatta National Public School
             </h1>
           </div>
 
           <div className="text-center flex-1 hidden md:block">
             <h1 className="text-3xl font-extrabold text-green-800 uppercase">
-              Araybhat National Public School
+              Aryabhatta National Public School
             </h1>
             <h2 className="text-xl font-bold text-purple-800">
               Ramnagar, BIHAR-845106

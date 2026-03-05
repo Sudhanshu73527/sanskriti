@@ -27,8 +27,9 @@ const AdmissionNotification = () => {
           </h2>
 
           <p className="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
-            Give your child the opportunity to grow with excellence, discipline,
-            and innovation. Limited seats available for this academic session.
+            Admission is open to classes Pre‐Nursery to Class VIII.  The admission process is designed to test the 
+proficiency in various subjects, which will reveal the child's problem‐solving skills.  We believe that this 
+method of testing the student will allow us to look at him/her holistically.  
           </p>
 
           {/* Hurry Up Badge */}

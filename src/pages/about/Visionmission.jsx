@@ -38,10 +38,11 @@ const Visionmission = () => {
             </h3>
 
             <p className="text-gray-600 leading-relaxed text-lg">
-              To shape confident, capable, and responsible individuals who
-              strive for excellence in academics and character. We envision
-              a learning environment where innovation, integrity, and
-              leadership grow together.
+              At ANPS, we foster an environment where a child has natural desire to learn and experience creative journey 
+of self-exploration. We are a school with an Indian mind, an Indian heart and an Indian soul; a school that celebrates 
+the culture of excellence and is an embodiment of values. We believe that a curriculum of excellence with child
+centric academic and co-curricular is key to the education of children to face the challenges with confidence and 
+strength of character.
             </p>
           </div>
 
@@ -58,10 +59,10 @@ const Visionmission = () => {
             </h3>
 
             <p className="text-gray-600 leading-relaxed text-lg">
-              To provide a progressive and inclusive educational atmosphere
-              that fosters academic excellence, creativity, discipline,
-              and strong moral values. Our mission is to empower students
-              to succeed in an ever-evolving world.
+             The ANPS believe that the pursuit of excellence rests on the positive belief to develop the qualities of 
+integrity, honesty, trust and a culture of academic excellence, therefore; our Mission is to provide a learning 
+environment that encourages children to bring out the best in themselves and enables their all-round development 
+through the joy of learning, enduring values and the celebration of diversity.
             </p>
           </div>
 
