@@ -34,9 +34,9 @@ const Prospectus = () => {
             {/* Left Side - Icon & Info */}
             <div>
               <div className="flex items-center gap-3 mb-4 text-red-600">
-                <FaFilePdf className="text-4xl" />
+                {/* <FaFilePdf className="text-4xl" /> */}
                 <h2 className="text-2xl font-semibold text-gray-800">
-                  Official Prospectus 2024-25
+                  Official Prospectus 
                 </h2>
               </div>
 
