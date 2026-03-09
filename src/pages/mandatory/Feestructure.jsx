@@ -4,8 +4,8 @@ const Feestructure = () => {
   const classFees = [
     {
       class: "K1, K2, K3",
-      tuition: 950,
-      activity: 100,
+      tuition: 1050,
+      activity: "-",
       computer: "-",
       totalPerMonth: 1050,
       regFee: 200,
@@ -15,42 +15,42 @@ const Feestructure = () => {
     },
     {
       class: "Prep to III",
-      tuition: 1400,
-      activity: 75,
+      tuition: 1425,
+      activity: "-",
       computer: "-",
-      totalPerMonth: 1475,
+      totalPerMonth: 1425,
       regFee: 200,
       development: 2000,
       admission: 2400,
-      total: 6075,
+      total: 6025,
     },
     {
       class: "IV to V",
-      tuition: 1400,
-      activity: 75,
-      computer: 75,
-      totalPerMonth: 1550,
+      tuition: 1500,
+      activity: "-",
+      computer: "-",
+      totalPerMonth: 1500,
       regFee: 200,
       development: 2000,
       admission: 2400,
-      total: 6150,
+      total: 6100,
     },
     {
       class: "VI to VIII",
-      tuition: 1550,
-      activity: 75,
-      computer: 75,
-      totalPerMonth: 1700,
+      tuition: 1650,
+      activity: "-",
+      computer: "-",
+      totalPerMonth: 1650,
       regFee: 200,
       development: 2000,
       admission: 2400,
-      total: 6300,
+      total: 6250,
     },
     {
       class: "IX to X",
-      tuition: 1800,
+      tuition: 1700,
       activity: "-",
-      computer: 100,
+      computer: 200,
       totalPerMonth: 1900,
       regFee: 200,
       development: 2000,
@@ -77,25 +77,26 @@ const Feestructure = () => {
     { village: "Baswaria", fee: 850 },
     { village: "Kandhwaliya", fee: 800 },
     { village: "Bagahi", fee: 750 },
-    { village: "Hardiyaa", fee: 650 },
+    { village: "Hardiya", fee: 650 },
     { village: "Bargajwa", fee: 600 },
     { village: "Serhwa", fee: 650 },
     { village: "Sabeya", fee: 700 },
     { village: "Bahuari", fee: 650 },
+    { village: "Kandhwaliya", fee: 800 },
     { village: "Gabnaha", fee: 850 },
     { village: "Murera", fee: 750 },
     { village: "Telpur", fee: 800 },
-    { village: "Delurwa", fee: 800 },
+    { village: "Deurwa", fee: 800 },
     { village: "Byaspur", fee: 900 },
-    { village: "Malahi Tola", fee: 950 },
+    { village: "Malahitola", fee: 950 },
     { village: "Sikta", fee: 950 },
+    { village: "Pachrukhiya", fee: 850 },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 py-10 px-4">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-green-700">
             Fee Structure (2026-27)
@@ -116,21 +117,21 @@ const Feestructure = () => {
                 <th className="p-3">Computer / Lab</th>
                 <th className="p-3">Total / Month</th>
                 <th className="p-3">Reg. Fee</th>
-                <th className="p-3">Development (Yearly)</th>
+                <th className="p-3">Development</th>
                 <th className="p-3">Admission Fee</th>
                 <th className="p-3">Total</th>
               </tr>
             </thead>
+
             <tbody>
               {classFees.map((item, index) => (
-                <tr
-                  key={index}
-                  className="border-t hover:bg-green-50 transition"
-                >
+                <tr key={index} className="border-t hover:bg-green-50">
                   <td className="p-3 font-semibold">{item.class}</td>
                   <td className="p-3">₹{item.tuition}</td>
-                  <td className="p-3">{item.activity !== "-" ? `₹${item.activity}` : "-"}</td>
-                  <td className="p-3">{item.computer !== "-" ? `₹${item.computer}` : "-"}</td>
+                  <td className="p-3">{item.activity}</td>
+                  <td className="p-3">
+                    {item.computer !== "-" ? `₹${item.computer}` : "-"}
+                  </td>
                   <td className="p-3 font-semibold text-blue-600">
                     ₹{item.totalPerMonth}
                   </td>
@@ -151,27 +152,36 @@ const Feestructure = () => {
           <h2 className="text-xl font-bold text-green-700 mb-4">
             Additional Charges
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
             <div className="bg-blue-100 p-4 rounded-lg font-semibold">
               Tie: ₹50 / ₹70
             </div>
+
             <div className="bg-green-100 p-4 rounded-lg font-semibold">
               Belt: ₹100
             </div>
+
             <div className="bg-yellow-100 p-4 rounded-lg font-semibold">
               Diary: ₹100
             </div>
+
             <div className="bg-red-100 p-4 rounded-lg font-semibold">
               ID Card: ₹80
+            </div>
+
+            <div className="bg-purple-100 p-4 rounded-lg font-semibold">
+              Copy: ₹25
             </div>
           </div>
         </div>
 
-        {/* Conveyance Fee */}
+        {/* Conveyance */}
         <div className="bg-white shadow-xl rounded-2xl overflow-x-auto">
           <h2 className="text-xl font-bold text-center text-green-700 py-6">
-            Transpotation  Fee (Village Wise)
+            Transportation Fee (Village Wise)
           </h2>
+
           <table className="min-w-full text-sm text-center border">
             <thead className="bg-blue-600 text-white">
               <tr>
@@ -180,12 +190,10 @@ const Feestructure = () => {
                 <th className="p-3">Conveyance Fee</th>
               </tr>
             </thead>
+
             <tbody>
               {conveyance.map((item, index) => (
-                <tr
-                  key={index}
-                  className="border-t hover:bg-blue-50 transition"
-                >
+                <tr key={index} className="border-t hover:bg-blue-50">
                   <td className="p-3">{index + 1}</td>
                   <td className="p-3 font-medium">{item.village}</td>
                   <td className="p-3 font-semibold text-blue-700">

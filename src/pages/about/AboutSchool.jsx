@@ -43,7 +43,7 @@ const AboutSchool = () => {
             <div className="absolute -top-4 -left-4 w-full h-full bg-yellow-200 rounded-2xl md:rounded-3xl"></div>
 
             <img
-              src="/secondary.jpg"
+              src="/bhat12.png"
               alt="School Campus"
               className="relative w-full h-[280px] sm:h-[350px] md:h-[500px] object-cover rounded-2xl md:rounded-3xl shadow-2xl"
             />

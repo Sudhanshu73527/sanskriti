@@ -30,10 +30,7 @@ const Navbar = () => {
     {
       name: "ACADEMICS",
       subItems: [
-        { label: "Pre-Primary", path: "/academics/pre-primary" },
-        { label: "Primary", path: "/academics/primary" },
-        { label: "Secondary", path: "/academics/secondary" },
-        { label: "Senior Secondary", path: "/academics/senior-secondary" },
+        { label: "School-Section", path: "/academics/section" },
         { label: "Procpectus", path: "/academics/prospectus" },
       ],
     },
@@ -61,14 +58,12 @@ const Navbar = () => {
         { label: "Music", path: "/extra-curriculum/music" },
         { label: "Dance", path: "/extra-curriculum/dance" },
         { label: "Yoga", path: "/extra-curriculum/yoga" },
-        { label: "Art & Craft", path: "/extra-curriculum/art-craft" },
       ],
     },
     {
       name: "MANDATORY DETAILS",
       subItems: [
         { label: "CBSE Info", path: "/mandatory/cbse-info" },
-        { label: "Affiliation", path: "/mandatory/affiliation" },
         { label: "Fee Structure", path: "/mandatory/fee" },
         { label: "Student Details", path: "/mandatory/student"}
 

@@ -19,6 +19,11 @@ import Parentsenquiry from "../pages/admission/Parentsenquiry";
 import Library from "../pages/Facilities/Library";
 import Transport from "../pages/Facilities/Transport";
 import Sports from "../pages/Facilities/Sports";
+import Cbseinfo from "../pages/mandatory/Cbseinfo";
+import Dance from "../pages/Extracuricullam/Dance";
+import Music from "../pages/Extracuricullam/Music";
+import Yoga from "../pages/Extracuricullam/Yoga";
+import Academicssection from "../pages/Academicssection";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +47,12 @@ const router = createBrowserRouter([
       {path:"/enquiry-form", element: <Parentsenquiry/>},
       {path:"/facilities/library", element: <Library/>},
       {path: "/facilities/transport", element: <Transport/>},
-      {path: "/facilities/sports", element: <Sports/>}
+      {path: "/facilities/sports", element: <Sports/>},
+      {path: "/mandatory/cbse-info", element: <Cbseinfo/>},
+      {path : "/extra-curriculum/dance", element: <Dance/>},
+      {path: "/extra-curriculum/music", element: <Music/>},
+      {path: "/extra-curriculum/yoga", element: <Yoga/>},
+      {path: "/academics/section", element: <Academicssection/>},
     ],
   },
 ]);
